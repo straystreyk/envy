@@ -25,18 +25,6 @@
 cargo install envy
 ```
 
-### Via install script (macOS/Linux)
-
-```bash
-curl -sSf https://raw.githubusercontent.com/MasterSaya/envy/main/install.sh | bash
-```
-
-### Via PowerShell (Windows)
-
-```powershell
-irm https://raw.githubusercontent.com/MasterSaya/envy/main/install.ps1 | iex
-```
-
 ### Build from source
 
 ```bash
