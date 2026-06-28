@@ -38,7 +38,7 @@ pub fn list(args: ListArgs) {
         }
     } else {
         let mut builder = Builder::new();
-        builder.push_record(["key", "value"]);
+        builder.push_record(["KEY", "VALUE"]);
 
         for entry in &entries {
             let value = if show_values {

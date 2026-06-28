@@ -70,7 +70,7 @@ pub fn diff(args: DiffArgs) {
 
     let mut builder = Builder::new();
     // строим таблицу
-    let mut header = vec!["key".to_string()];
+    let mut header = vec!["KEY".to_string()];
     header.extend(names.clone());
     builder.push_record(&header);
 
