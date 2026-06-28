@@ -7,6 +7,7 @@ use tabled::settings::{Color, Modify, object::Rows};
 
 #[derive(Args)]
 pub struct DiffArgs {
+    #[arg(value_name = "FILES", num_args = 2..)]
     pub paths: Vec<PathBuf>,
 }
 
@@ -23,6 +24,11 @@ fn row_status(values: &[String]) -> &'static str {
 
 pub fn diff(args: DiffArgs) {
     let DiffArgs { paths } = args;
+
+    if paths.is_empty() || paths.len() < 2 {
+        eprintln!("[ENVY_ERROR]: provide at least two files to compare");
+        std::process::exit(1);
+    }
 
     let mut rows: Vec<DiffRow> = Vec::new();
     let mut names: Vec<String> = Vec::new();
